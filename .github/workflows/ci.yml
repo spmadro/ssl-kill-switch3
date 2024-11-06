@@ -34,6 +34,10 @@ jobs:
       #     git submodule update --init --recursive
       #     git submodule update --remote
 
+      
+      - name: Echo github.ref
+        run: echo "github.ref is ${{ github.ref }}"
+        
       ################################################
       ### Setup Theos environment
       ################################################
