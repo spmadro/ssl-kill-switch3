@@ -45,7 +45,7 @@ jobs:
 
       - name: Theos Setup (Use Cache)
         id: cache
-        uses: actions/cache@v2
+        uses: actions/cache@v3
         with:
           path: ${{ github.workspace }}/theos
           key: ${{ runner.os }}-${{ steps.verify-cache.outputs.heads }}
@@ -98,14 +98,14 @@ jobs:
       # We have to split into two call because actions/upload-artifact will use common ancestor if multi path given
       - name: Publish Debug artifact - Substrate
         if: ${{ !startsWith(github.ref, 'refs/tags/') }}
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
           name: sslkillswitch3-debug
           path: |
             ${{ github.workspace }}/packages/*.deb
       - name: Publish Debug artifact - Fishhook
         if: ${{ !startsWith(github.ref, 'refs/tags/') }}
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
           name: sslkillswitch3-debug
           path: |
