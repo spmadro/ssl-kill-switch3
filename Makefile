@@ -1,4 +1,4 @@
-ARCHS := arm64 arm64e arm
+ARCHS := arm64 arm64e armv7
 
 TWEAK_NAME = SSLKillSwitch2
 SSLKillSwitch2_FILES = SSLKillSwitch/SSLKillSwitch.m
